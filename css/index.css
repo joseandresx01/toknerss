@@ -185,6 +185,10 @@ ul {
     padding-top: 200px;
 }
 
+.gris{
+    color: rgb(111, 113, 121);
+}
+
 .seccion4 {
     gap: 10px;
 }
@@ -633,6 +637,7 @@ ul {
 
 
 @media (max-width:480px) {
+
     .barra ul {
         display: none;
     }
@@ -703,6 +708,7 @@ ul {
         gap: 10px;
         display: flex;
         flex-direction: column;
+        padding-left: 20px;
         
     }
 
@@ -719,12 +725,18 @@ ul {
         flex-direction: column;
         display: flex;
         align-items: center;
+        
     }
 
     .seccion5 .hijo4 {
         width: 94%;
-        margin-left: 14px;
+        margin-left: 1px;
     }
+
+    .seccion5 .seccion5h2{
+        margin-left: 0px;
+    }
+
 
     .seccion6 {
         display: none;
@@ -772,5 +784,163 @@ ul {
         margin-bottom: 30px
     }
 
+
+}
+
+@media(min-width:481px) and (max-width: 767px) {
+
+    .barra ul {
+        display: none;
+    }
+
+    .barra .hijo2 {
+        display: none;
+    }
+
+    .barra .logo {
+        width: 150px;
+    }
+
+    .barra {
+        padding: 0 10px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .seccion1 {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .seccion1 .hijo2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seccion1 .hijo1 {
+        margin: 0%;
+        width: 100%;
+    }
+
+    .seccion2 {
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .seccion3 {
+        flex-direction: column;
+    }
+
+    .seccion3 .lado1 {
+        display: none;
+    }
+
+    .seccion3m {
+        display: block;
+    }
+
+    .seccion3 .lado2 {
+        width: 100%;
+        border-top-right-radius: 210px;
+        border-top-left-radius: 0px;
+        text-align: start;
+    }
+
+    .seccion4 .verde {
+        display: none;
+    }
+
+    .seccion4 .circulos {
+        margin-top: 50px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        
+    }
+
+
+    .hijo4 {
+        margin-left: 30px;
+    }
+
+    .seccion5 {
+        margin-top: 70px;
+    }
+
+    .seccion5 .cuadropadre3 {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .seccion5 .hijo4 {
+        width: 94%;
+        margin-left: 1px;
+    }
+
+    .seccion5 .seccion5h2{
+        margin-left: 0px;
+    }
+
+    .seccion6 {
+        display: none;
+
+    }
+
+    .seccion6media {
+        height: 100px;
+        display: block;
+    }
+
+    .seccion6mediaf {
+        margin-top: -25px;
+        width: 480px;
+    }
+    .circuloazm{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seccion7 {
+        margin-top: 650px;
+    }
+
+    .seccion7 .circulo7{
+        display: none;
+        transform: rotate(90deg);
+    }
+    .seccion7 .cuadros2 {
+        flex-direction: column;
+    }
+
+    .seccion7t{
+        z-index: 1;
+    }
+
+    .seccion7 .cuadro6{
+        z-index: 1;
+    }
+
+    .seccion8 {
+        display: none;
+    }
+
+    .seccion9 {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .redes{
+        gap: 3px;
+    }
+    .seccion9 .logo {
+        margin-bottom: 30px
+    }
 
 }
