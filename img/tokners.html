@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokners</title>
+    <style>
+        .pagina {
+            background-color: #0F1320;
+            color: white;
+            background-image: url(bg.png);
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: top right;
+
+
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .barra {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .barra .hijo1 {
+            display: flex;
+
+        }
+
+        .hijo1 ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        .hijo1 ul li {
+            transition: color ease-in-out 0.2s;
+        }
+
+        .hijo1 ul li:hover {
+            color: blue;
+        }
+
+        .hijo2 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .barra .hijo2 .boton {
+            border: 2px solid #22A75D;
+            padding: 0 20px;
+            border-radius: 20px;
+            transition: transform ease-in-out 0.4s;
+        }
+
+        .barra .hijo2 .boton:hover {
+            transform: scale(1.2);
+        }
+
+        .seccion1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .degradado {
+            background: -webkit-linear-gradient(#2B3087, #00B4EC);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .seccion1 .hijo2 {
+            width: 60%;
+        }
+
+        .seccion1 .hijo1 {
+            width: 40%;
+        }
+
+        .seccion1 .hijo1 h3 {
+            background-color: #22A75D;
+            width: fit-content;
+            border-radius: 20px;
+            box-shadow: 0px 15px 25px 0px rgba(34, 167, 93, 0.25);
+            padding: 8px;
+        }
+
+        .seccion2 {
+            color: white;
+            gap: 53px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .cuadropadre {
+            padding: 28px;
+            background-color: #171B29;
+            border-radius: 20px;
+            height: fit-content;
+        }
+
+        .cuadropadre2 {
+            margin-bottom: 100px;
+            margin-top: 80px;
+            padding: 28px;
+            background-color: #171B29;
+            border-radius: 20px;
+
+        }
+
+        .corona {
+            border-radius: 100px;
+            background-color: #22A75D;
+            width: 20px;
+            padding: 15px;
+            box-shadow: 0px 15px 25px 0px rgba(34, 167, 93, 0.25);
+
+        }
+
+        .estrella {
+            border-radius: 100px;
+            background-color: #2278D4;
+            width: 20px;
+            padding: 15px;
+            box-shadow: 0px 15px 25px 0px rgba(34, 120, 212, 0.25);
+
+        }
+
+        .linea {
+            display: flex;
+            gap: 8px;
+        }
+
+        .learn {
+            color: #22A75D;
+            display: flex;
+            gap: 8px;
+        }
+
+        .learn2 {
+            color: #2278D4;
+            display: flex;
+            gap: 8px;
+        }
+        .seccion3m{
+            display: none;
+        }
+        .seccion3 {
+            display: flex;
+            color: grey;
+        }
+
+        .lado1 {
+            width: 50%;
+        }
+
+        .lado2 {
+            width: 50%;
+            background-color: white;
+            color: black;
+            border-top-left-radius: 310px;
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        .seccion4 {
+            gap: 10px;
+        }
+        .seccion4 .verde .borde{
+            width: 18%;
+        }
+        .seccion4 .verde{
+            display: flex;
+            justify-content: end;
+        }
+        .circulos{
+            display: flex;
+            justify-content: space-around;
+        }
+        .seccion4 .figura{
+            align-self: flex-end;
+        }
+
+        .circulo1 {
+            border-radius: 100px;
+            background-color: rgba(34, 167, 93, 1);
+            box-shadow: 0px 15px 25px 0px rgba(34, 167, 93, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+        }
+
+        .seccion4 .puntito{
+            width: 15px;
+            height: 15px;
+            background-color:#22A75D;
+            border-radius: 100px;
+        }
+        .seccion4 span{
+            color: #22A75D;
+            font-weight: bolder;
+        }
+
+        .circulo1p2 {
+            display: flex;
+        }
+        .seccion4 .circulo2p .figura{
+            align-self: flex-end;
+        }
+
+        .circulo2 {
+            border-radius: 100px;
+            background-color: rgba(34, 120, 212, 1);
+            box-shadow: 0px 15px 25px 0px rgba(34, 120, 212, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+        }
+        .seccion4 .puntito2{
+            width: 15px;
+            height: 15px;
+            background-color:rgba(34, 120, 212, 1);
+            border-radius: 100px;
+        }
+        .circulo2p span{
+            color: rgba(34, 120, 212, 1);
+            font-weight: bolder;
+        }
+
+        .circulo2p2 {
+            display: flex;
+        }
+
+        .circulo3 {
+            border-radius: 100px;
+            background-color: rgba(255, 209, 0, 1);
+            box-shadow: 0px 15px 25px 0px rgba(255, 209, 0, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+        }
+        .seccion4 .puntito3{
+            width: 15px;
+            height: 15px;
+            background-color:rgba(255, 209, 0, 1);
+            border-radius: 100px;
+        }
+        .circulo3p2 {
+            display: flex;
+        }
+        .circulo3p span{
+            color: rgba(255, 209, 0, 1);
+            font-weight: bolder;
+        }
+
+
+        .circulo4 {
+            border-radius: 100px;
+            background-color: rgba(226, 6, 19, 1);
+            box-shadow: 0px 15px 25px 0px rgba(226, 6, 19, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+        }
+        .seccion4 .puntito4{
+            width: 15px;
+            height: 15px;
+            background-color: rgba(226, 6, 19, 1);
+            border-radius: 100px;
+        }
+
+        .circulo4p2 {
+            display: flex;
+        }
+        .circulo4p span{
+            color: rgba(226, 6, 19, 1);
+            font-weight: bolder;
+        }
+
+
+
+
+
+        .seccion5 {
+            margin-top: 200px;
+            color: white;
+        }
+        .seccion5imgp {
+            display: flex;
+            gap: 20px;
+        }
+        .seccion5texto {
+            color: white;
+        }
+
+        .cuadropadre3 {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+
+        .seccion5 .hijo3 {
+            width: 55%;
+        }
+
+        .seccion5 .hijo4 {
+            width: 40%;
+            background-color: #171B29;
+            border-radius: 20px;
+        }
+
+        .seccion5h2 {
+            margin-left: -50px;
+            margin-top: -25px;
+            width: 85%;
+        }
+
+        .more {
+            padding: 10px;
+            width: fit-content;
+            border: 2px solid #22A75D;
+            border-radius: 20px;
+        }
+
+
+
+        .seccion6 {
+            text-align: center;
+        }
+        .imagens6{
+            position: absolute;
+        }
+
+        .seccion6a {
+            position: relative;
+            top: 300px;
+        }
+
+        .cuadros {
+            justify-content: center;
+            display: flex;
+            gap: 15px;
+        }
+
+        .circulov{
+            border-radius: 100px;
+            background-color: rgba(34, 167, 93, 1);
+            box-shadow: 0px 15px 25px 0px rgba(34, 167, 93, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+            margin-left: 65px;
+        }
+        .cuadro3 {
+            padding: 100px;
+            height: fit-content;
+            border-radius: 20px;
+            width: fit-content;
+            background-color: white;
+        }
+
+        .circuloaz{
+            border-radius: 100px;
+            background-color: rgba(34, 120, 212, 1);
+            box-shadow: 0px 15px 25px 0px rgba(34, 120, 212, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+            margin-left: 65px;
+        }
+        .cuadro4 {
+            padding: 100px;
+            margin-top: 50px;
+            border-radius: 20px;
+            width: fit-content;
+            background-color: white;
+        }
+
+
+        .circuloam{
+            border-radius: 100px;
+            background-color: rgba(255, 209, 0, 1);
+            box-shadow: 0px 15px 25px 0px rgba(255, 209, 0, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+            margin-left: 65px;
+        }
+        .cuadro5 {
+            padding: 100px;
+            height: fit-content;
+            border-radius: 20px;
+            width: fit-content;
+            background-color: white;
+        }
+
+
+        .seccion6 h2 {
+            color: #0F1320;
+            padding-top: 20px;
+
+        }
+
+        .textoss6 {
+            color: black;
+        }
+
+        .seccion6media{
+            display: none;
+        }
+        .seccion6mediaf{
+            position: absolute;
+        }
+        .cuadros6p{
+            position: relative;
+        }
+        .cuadros6m{
+            padding: 100px;
+            margin-top: 50px;
+            border-radius: 20px;
+            width: fit-content;
+            background-color: white;
+        }
+        .circuloazm{
+            color: rgba(15, 19, 32, 1);
+            background-color: rgba(34, 120, 212, 1);
+            box-shadow: 0px 15px 25px 0px rgba(34, 120, 212, 0.25);
+            width: 80px;
+            height: 80px;
+            border-radius: 50px 50px 50px 20px;
+            text-align: center;
+            margin-left: 40px;
+        }
+
+        .seccion7{
+            margin-top: 450px;
+        }
+        .seccion7tp{
+            display: flex;
+            justify-content: center;
+        }
+        .cuadros2{
+            display: flex;
+            justify-content: center;
+        }
+        .cuadro6{
+            background-color: #171B29;
+            border-radius: 20px;
+            padding: 50px;
+            
+        }
+        .cuadro7{
+            margin-top: 50px;
+            background-color: #171B29;
+            border-radius: 20px;
+            padding: 50px;
+            
+        }
+        .cuadro8{
+            background-color: #171B29;
+            border-radius: 20px;
+            padding: 50px;
+            
+        }
+        .circulo7{
+            margin-top: 100px;
+            border-radius: 100px;
+            background-color:rgba(23, 27, 41, 1) ;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            
+        }
+        .textoss8{
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+
+
+        .seccion9{
+            margin-top: 150px; 
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .redes{
+            display: flex;
+            gap: 10px;
+        }
+        .twitter{
+            padding: 10px;
+            width: 35px;
+            border: 1px solid white;
+            border-radius: 50px;
+        }
+        .telegram{
+            padding: 10px;
+            width: 35px;
+            border: 1px solid white;
+            border-radius: 50px;
+        }
+        .instagram{
+            padding: 10px;
+            width: 35px;
+            border: 1px solid white;
+            border-radius: 50px;
+        }
+        .m{
+            padding: 10px;
+            width: 35px;
+            border: 1px solid white;
+            border-radius: 50px;
+        }
+        .github{
+            padding: 10px;
+            width: 35px;
+            border: 1px solid white;
+            border-radius: 50px;
+        }
+        .reddit{
+            padding: 10px;
+            width: 35px;
+            border: 1px solid white;
+            border-radius: 50px;
+        }
+        .imgs9{
+            width: 10px;
+        }
+
+
+
+
+
+
+
+        @media (max-width:480px) {
+            .barra ul {
+                display: none;
+            }
+
+            .barra .hijo2 {
+                display: none;
+            }
+
+            .barra .logo {
+                width: 150px;
+            }
+
+            .barra {
+                padding: 0 10px;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .seccion1 {
+                flex-direction: column;
+                align-items: initial;
+            }
+
+            .seccion1 .hijo2 {
+                width: 60%;
+            }
+
+            .seccion1 .hijo1 {
+                width: 40%;
+            }
+
+            .seccion2 {
+                flex-direction: column;
+            }
+
+            .seccion3 {
+                flex-direction: column;
+            }
+
+            .seccion3 .lado1 {
+               display: none;
+            }
+            .seccion3m{
+                display: block;
+            }
+
+            .seccion3 .lado2 {
+                width: 100%;
+                border-top-right-radius: 210px;
+                border-top-left-radius: 0px;
+                text-align: start;
+            }
+
+            .seccion4 .verde{
+                display: none;
+            }
+
+            .seccion4 .circulos {
+                margin-top: 50px;
+                gap: 10px;
+                flex-direction: column;
+            }
+
+            .hijo4 {
+                margin-left: 30px;
+            }
+
+            .seccion5 {
+                margin-top: 70px;
+            }
+
+            .seccion5 .cuadropadre3 {
+                flex-direction: column;
+                margin-left: 30px;
+            }
+
+            .seccion5 .hijo4 {
+                width: 94%;
+                margin-left: 14px;
+            }
+
+            .seccion6{
+                display: none;
+    
+            }
+
+            .seccion6media{
+                height: 100px;
+                display: block;
+            }
+            .seccion6mediaf{
+                margin-top: -25px;
+            }
+            .seccion7{
+                margin-top: 650px;
+            }
+
+            .seccion7 .cuadros2{
+                flex-direction: column;
+            }
+
+            .seccion8{
+                display: none;
+            }
+
+            .seccion9{
+                flex-direction: column;
+            }
+
+            .seccion9 .logo{
+                margin-left: 70px;
+                margin-bottom: 30px 
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pagina">
+        <div class="barra">
+
+            <div class="hijo1">
+                <div class="logo">
+                    <img src="logot.png" alt="">
+                </div>
+                <ul>
+                    <li>Our team</li>
+                    <li style="color: #005CA9;">Tokens</li>
+                    <li>Connect wallet</li>
+                    <li>Lightpaper</li>
+                </ul>
+            </div>
+            <div class="burger">
+                <img src="menu-ic.png" alt="">
+            </div>
+            <div class="hijo2">
+                <div>
+                    <a>Sign In</a>
+                </div>
+                <div class="boton">
+                    <h3>Sign Up</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="seccion1">
+            <div class="hijo1">
+                <p class="degradado">At Tokners we are</p>
+                <h1>Reimagining social media through the power of the blockchain.</h1>
+                <p>We are creating social media 3.0 with influencers,celebrities and creators being able to launch their
+                    own digital currency by simply creating a profile with media content posted as Non fungible Tokens
+                    that
+                    can be owned and traded on the Tknrs network</p>
+                <h3>Learn More</h3>
+            </div>
+            <div class="hijo2">
+                <img src="celulares.png" alt="">
+            </div>
+
+        </div>
+        <div class="seccion2">
+            <div class="cuadropadre">
+                <div class="cuadro">
+                    <div class="corona">
+                        <img src="corona.png" alt="">
+                    </div>
+                    <div class="linea">
+                        <h3>for</h3>
+                        <h3 style="text-decoration-line:underline;color:#22A75D;">Creators</h3>
+                    </div>
+                    <div>
+                        Creators can gain independence through a decentralised digital currency system <br> that is
+                        dependent on
+                        growing and engaging with the community and also their <br> star power. They own 10-15% of the
+                        total
+                        value of the tokens minted.
+                    </div>
+                    <div class="learn">
+                        <h3 style="text-decoration-line:underline;color:#22A75D;">Learn More</h3>
+                        <h3>→</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cuadropadre2">
+                <div class="cuadro2">
+                    <div class="estrella">
+                        <img src="estrella.png" alt="">
+                    </div>
+                    <div class="linea">
+                        <h3>for</h3>
+                        <h3 style="text-decoration-line:underline;color:#2278D4;">Holders</h3>
+                    </div>
+                    <div>
+                        Holding social tokens allows the individual to gain access to benefits including <br> unreleased
+                        content, private communities, direct access to celebrity, early- <br> access to tickets and more
+                        as well
+                        as the ability to trade with other communities in <br> order to gain access to more creator
+                        content with
+                        early token buyers being the <br> biggest winners as the value of the token increases with more
+                        buyers.
+                    </div>
+                    <div class="learn2">
+                        <h3 style="text-decoration-line:underline;color:#2278D4;">Learn More</h3>
+                        <h3>→</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="seccion3m">
+            <div>
+                <img src="lado22.png" alt="">
+            </div>
+        </div>
+        <div class="seccion3">
+            <div class="lado1">
+                <img src="lado1.png" alt="">
+            </div>
+            <div class="lado2">
+                <div>
+                    <h1>What makes us different?</h1>
+                    <h3>We would only launch tokens with the express permission of the creators.</h3>
+                    <h3>There are several thousand celebrities and creators on twitter, tiktok,<br> Instagram and
+                        YouTube with
+                        followings in the millions who we would be <br> actively engaging before we go viral. We would
+                        get them on
+                        our platform <br> and they would see the opportunity <br> to create a fan driven digital economy
+                        where their
+                        digital content can be <br> traded as NFTs and their most loyal fans can have the monetary value
+                        of <br> their
+                        creator's currency increase significantly as they promote their digital <br> currency across
+                        their channels
+                        while our native token holders benefit from <br> the Weentar popularity.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="seccion4">
+            <div class="verde">
+                <div class="borde">
+                    <img src="border.png" alt="">
+                </div>
+            </div>
+            <div class="circulos">
+                <div class="circulo1p">
+                    <div class="circulo1p2">
+                        <div class="circulo1">
+                            <h2>Q1</h2>
+                        </div>
+                        <div class="figura">
+                            <div class="puntito">
+                            </div>
+                            2021
+                        </div>
+        
+                    </div>
+                    <p><span>01</span> Team set-up</p>
+                    <p><span>02</span> Launch of informational website</p>
+                     
+        
+                </div>
+                <div class="circulo2p">
+                    <div class="circulo2p2">
+                        <div class="circulo2">
+                            <h2>Q2</h2>
+                        </div>
+                        <div class="figura">
+                            <div class="puntito2">
+                            </div>
+                            2021
+                        </div>
+                    </div>
+                    <p><span>01</span> Presale and exchange listings</p>
+                    <p><span>02</span> Blockchain development and launch</p>
+                    <p><span>03</span> Launch of our MVP Influencer agency partnerships</p>
+                    <p><span>04</span> Marketing and promotion</p>
+                </div>
+                <div class="circulo3p">
+                    <div class="circulo3p2">
+                        <div class="circulo3">
+                            <h2>Q3</h2>
+                        </div>
+                        <div class="figura">
+                            <div class="puntito3">
+                            </div>
+                            2021
+                        </div>
+                        
+                    </div>
+                    <p><span>01</span> Celebrity, Creator and Influencer partnerships</p>
+                    <p><span>02</span> Expansion of creator communities on our platform</p>
+                    <p><span>03</span> More Marketing and promotion</p>
+                    
+                    
+                </div>
+                <div class="circulo4p">
+                    <div class="circulo4p2">
+                        <div class="circulo4">
+                            <h2>Q4</h2>
+                        </div>
+                        <div class="figura">
+                            <div class="puntito4">
+                            </div>
+                            2021
+                        </div>  
+                    </div>
+                    <p><span>01</span> Mainstream partnerships</p>
+                    <p><span>02</span> 500 active creator communities</p>
+                    <p><span>03</span> 2Million active community members</p>
+                    <p><span>03</span> More Marketing and promotion</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion5">
+            <div class="cuadropadre3">
+                <div class="hijo4">
+                    <div class="seccion5h2">
+                        <img src="manocelu.png" alt="">
+                    </div>
+                </div>
+                <div class="hijo3">
+                    <div class="seccion5texto">
+                        <div class="seccion5imgp">
+                            <div style="margin-top: 20px;;">
+                                <img src="w.png" alt="">
+                            </div>
+                            <div>     
+                                <h1>Tokner is coming</h1>
+                            </div>
+                        </div>    
+                        <p>
+                            Cryptocurrency adoption is at less than 1% of the global world population with some
+                            countries and entities actively fighting against its mass adoption and the smartest
+                            developers and nerds holding the fort. Bitcoin was the first, and it has since grown to
+                            thousands of tokens launched all aiming to fix one problem or the other with some quite
+                            simply FOMOing the moment. Our goal is to bring mass adoption to the cryptocurrency space by
+                            dumbing it down. How far down? So down that even a celebrity can explain it in simple words
+                            to their followers and have them download an app, buy into the social currency of their
+                            favourite person and watch their investment as is with other crypto currency project. We are
+                            trying to do to this space what investment apps did for the "nonexistent retail investors".
+                            We are gamefying digital currency, bringing in popular faces instead of hard to understand
+                            projects to make it the norm and inadvertently being the "gateway drug" for a lot of people
+                            to finally give this space a real look.
+                        </p>
+                        <p>
+                            A new digital economy is coming. People would be just as powerful as countries and creators
+                            would be paid beyond the peanuts that conventional social media platforms can offer. There
+                            would be new markets and advertisers with little to offer would not find home there. Like
+                            Kanye said,
+                        </p>
+                        <p>
+                            "Personalities would become the new currency, and services would be built on top of them".
+                        </p>
+                        <p>
+                            Well, Kanye didn't exactly say that, but it sounds like something we hope he would say.
+                            Currency is digital, it has been that way for a while now, but this time there would be no
+                            dead presidents on the money, there would people like you on the money, and you would own it
+                            because it would make the most sense in the world.
+                        </p>
+                    </div>
+                    <div class="more">
+                        Read More
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="seccion6">
+            <div class="imagens6">
+                <img src="fondo.png" alt="">
+            </div>
+            <div class="seccion6a">
+                <div class="seccion6texto">
+                    <h1>Presale Details</h1>
+                </div>
+                <div class="cuadros">
+                    <div class="cuadro3">
+                        <div class="circulov">
+                            <h2>01</h2>
+                        </div>
+                        <div class="textoss6">
+                            <h1>Phase One</h1>
+                            <h3>0/04/2021 - 16/04/2021</h3>
+                        </div>
+                        <div class="textoss6">
+                            <h3>1 BNB = 100000 WNTR</h3>
+                            <h4>Soft cap: 5000 BNB</h4>
+                            <h4>Hard cap: 10000 BNB</h4>
+                        </div>
+                    </div>
+                    <div class="cuadro4">
+                        <div class="circuloaz">
+                            <h2>02</h2>
+                        </div>
+                        <div class="textoss6">
+                            <h1>Phase Two</h1>
+                            <h3>0/04/2021 - 16/04/2021</h3>
+                        </div>
+                        <div class="textoss6">
+                            <h3>1 BNB = 100000 WNTR</h3>
+                            <h4>Soft cap: 5000 BNB</h4>
+                            <h4>Hard cap: 10000 BNB</h4>
+                        </div>
+                    </div>
+                    <div class="cuadro5">
+                        <div class="circuloam">
+                            <h2>03</h2>
+                        </div>
+                        <div class="textoss6">
+                            <h1>Phase Three</h1>
+                            <h3>0/04/2021 - 16/04/2021</h3>
+                        </div>
+                        <div class="textoss6">
+                            <h3>1 BNB = 100000 WNTR</h3>
+                            <h4>Soft cap: 5000 BNB</h4>
+                            <h4>Hard cap: 10000 BNB</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seccion6media">
+            <div class="seccion6mediaf">
+                <img src="media.png" alt="">
+            </div>
+            <div class="cuadros6p">
+                <div class="cuadros">
+                    <div class="cuadros6m">
+                        <div class="circuloazm">
+                            <h2>02</h2>
+                        </div>
+                        <div class="textoss6">
+                            <h1>Phase Two</h1>
+                            <h3>0/04/2021 - 16/04/2021</h3>
+                        </div>
+                        <div class="textoss6">
+                            <h3>1 BNB = 100000 WNTR</h3>
+                            <h4>Soft cap: 5000 BNB</h4>
+                            <h4>Hard cap: 10000 BNB</h4>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="seccion7">
+            <div class="seccion7tp">
+                <div class="seccion7t">
+                    <h1>How to buy</h1>
+                </div>
+            </div>
+            <div class="cuadros2">
+                <div class="cuadro6">
+                    <h5>01</h5>
+                    <h3>First Connect your Metamask <br> or TrustWallet to the "Connect <br> Wallet" on the Homepage.</h3>
+                </div>
+                <div class="circulo7">
+                    <h1 style="color: rgba(34, 167, 93, 1);">></h1>
+                </div>
+                <div class="cuadro7">
+                    <h5>02</h5>
+                    <h3>Then send minimum of 0.1 <br> BNB or maximum of 10 BNB <br> to the Presale wallet</h3>
+                </div>
+                <div class="circulo7">
+                    <h1 style="color:rgba(255, 209, 0, 1);">></h1>
+                </div>
+                <div class="cuadro8">
+                    <h5>03</h5>
+                    <h3>Then after you will received <br> your $WNTR to your address <br> within 24hours.</h3>
+                </div>
+            </div>
+            
+        </div>
+        <div class="seccion8">
+            <div class="textoss8">
+                <h2 style="text-decoration-line:underline;color:white;">Our team</h2>
+                <h1>/</h1>
+                <h2 style="text-decoration-line:underline;color:white;">Tokens</h2>
+                <h1>/</h1>
+                <h2 style="text-decoration-line:underline;color:white;">Connect wallet</h2>
+                <h1>/</h1>
+                <h2 style="text-decoration-line:underline;color:white;">Lightpaper</h2>
+            </div>
+        </div>
+        <div class="seccion9">
+            <div class="logo">
+                <img src="logot.png" alt="">
+            </div>
+            <div class="redes">
+                <div class="twitter">
+                    <img src="twitter.png" alt="">
+                </div>
+                <div class="telegram">
+                    <img src="telegram.png" alt="">
+                </div>
+                <div class="instagram">
+                    <img src="instagram.png" alt="">
+                </div>
+                <div class="m">
+                    <img src="m.png" alt="">
+                </div>
+                <div class="github">
+                    <img src="github.png" alt="">
+                </div>
+                <div class="reddit">
+                    <img src="reddit.png" alt="">
+                </div>
+            </div>
+            <div>
+                <h3>© 2021 Tokners. All rights reserved.</h3>
+            
+            </div>
+        </div>
+
+
+</body>
+
+</html>
